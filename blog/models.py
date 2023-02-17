@@ -2,7 +2,7 @@ from django.db import models
 
 class Blog(models.Model):
     title = models.CharField(max_length=100)
-    discription = models.TextField()
+    description = models.TextField(null=True)
     date = models.DateField()
 
     def __str__(self):

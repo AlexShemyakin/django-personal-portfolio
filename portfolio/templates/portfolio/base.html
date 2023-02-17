@@ -1,5 +1,5 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,8 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;1,600&family=Lora:wght@600&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" href="{% static 'portfolio/logo.png' %}">
-
-  <title>Alexander Shemyakin</title>
+  {% block title %}
+  {% endblock %}
 </head>
 
 <body>
@@ -24,7 +24,7 @@
   <nav id="topNav" class="navbar navbar-expand-md navbar-light">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static 'portfolio/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="Nick's Logo">
+        <img src="{% static 'portfolio/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="Alex's Logo">
         <span>Alexander Shemyakin</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +32,6 @@
       </button>
       <div class="collapse navbar-collapse text-center" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% static 'portfolio/resume.pdf' %}">Resume</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/AlexShemyakin" target="_blank">GitHub</a>
           </li>

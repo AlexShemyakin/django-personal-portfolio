@@ -1,9 +1,10 @@
 {% extends "portfolio/base.html" %}
-
 {% load static %}
+{% block title %}
+<title>Portfolio</title>
+{% endblock %}
 
 {% block content %}
-
 <div class="row justify-content-center my-3">
   <div class="col-5">
     <img src="{% static 'portfolio/myfoto.jpg' %}" class="img-fluid">
@@ -24,17 +25,14 @@
 
     {% if project.url %}
     <a href="{{ project.url }}">
-      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2" width="768" height="500">
     </a>
     {% else %}
-
-    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2" width="768" height="500">
     {% endif %}
     <h3>{{ project.title }}</h3>
-    <p>{{ project.discription }}</p>
-
+    <p>{{ project.description }}</p>
   </div>
   {% endfor %}
 </div>
-
 {% endblock %}
